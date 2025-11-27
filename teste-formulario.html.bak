@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Validando Formulários com Javascript 2023</title>
+		<meta charset="utf-8">
+		<script language="javascript" type="text/javascript">
+		function validar(){
+		var nome = form1.nome.value;
+		var email = form1.email.value;
+		var senha = form1.senha.value;
+		var rep_senha = form1.rep_senha.value;
+		
+		if (nome == ""){
+		alert('por favor, preencha o campo com seu nome!!');
+		form1.nome.focus();
+		return false;
+		}
+		
+		if (email == ""){
+		alert('por favor, preencha o campo com seu email!!');
+		form1.email.focus();
+		return false;
+		}
+		
+		if (senha == ""){
+		alert('por favor, preencha o campo com sua senha!!');
+		form1.senha.focus();
+		return false;
+		}
+		
+		if (rep_senha == ""){
+		alert('por favor, repita sua senha!!');
+		form1.rep_senha.focus();
+		return false;
+		}
+		
+		if (nome.lengt < 5){
+		alert('por favor, preencha o campo com seu nome!!');
+		form1.nome.focus();
+		return false;
+		}
+		
+		if (senha !=  rep_senha){
+		alert('por favor, preencha o campo com seu nome!!');
+		form1.senha.focus();
+		return false;
+		}
+	}
+		</script>
+	</head>
+	<body bgcolor="lightblue">
+		<center><center><h1>Validação de campos com Javascript</h1></center><br><hr><br><br>
+			<form name="form1" action="form1Aviso.html" method="post">
+				Nome <input type="text" name="nome"><br/><br/>
+				Email<input type="text" name="email"><br/><br/>
+				Senha<input type="ckeckbox" name="senha"><br/><br/>
+				Repita Senha<input type="password" name="rep_senha"><br/><br/>
+				<input type="submit" onclick="return validar()" value="Enviar">
+				<input type="reset" name="limpa" value="Limpar">
+			</form></center>
+	</body>
+</html>
